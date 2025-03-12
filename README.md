@@ -27,19 +27,31 @@ and select only variables containing 'temp':
 $ hada --log-level=debug -v temp --bbox-deg 5,6,64,64.3 --dx 0.01 --dy 0.01 --output test3.nc
 ```
 
-## Installing without conda
+## Install using poetry:
 
 The description under "Setup" above is based on running `hada` in a `conda` environment.
 You can also install `hada` in a standard Python virtual environment.
 
 1. Install a Python interpreter (e.g. version 3.11.x)
-1. Install [Poetry](https://python-poetry.org/docs/#installation) (>= version 1.2)
+1. Install [Poetry](https://python-poetry.org/docs/#installation) (>= version 2.0)
 
 Create a virtual environment with `hada` installed:
 
 ```
 $ poetry install --without dev
 ```
+
+## Install using uv:
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and run the
+command below. It will automatically install the correct Python-version and create a
+virtual environment for you.
+
+```bash
+uv sync
+```
+
+## Installing system packages:
 
 Tip: If you're using a Debian-based distribution, you might need to:
 
